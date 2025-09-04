@@ -1,13 +1,14 @@
 {
-  "rewrites": [
+  "installCommand": "npm install --prefix frontend",
+  "buildCommand": "npm run build --prefix frontend",
+  "outputDirectory": "frontend/.next",
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
-      "cleanUrls": true
+      "src": "frontend/next.config.js",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": "frontend/.next"
+      }
     }
   ]
-}
-
-{ "routes" : [{
-    "handle": "filesystem" }, {"src": "/.*", "dest": "index.html" }]
 }
