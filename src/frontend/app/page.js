@@ -12,22 +12,8 @@ export default function LoginPage() {
 
     const handleLogin = async (e) => {
         e.preventDefault(); // Prevents form submission from reloading the page
-
-        // This is where you would call your backend API for login
-        // Temporary success/failure logic is written here
+        
         try {
-            // Actual API call (example)
-            // const response = await fetch('/api/login', {
-            //   method: 'POST',
-            //   headers: {
-            //     'Content-Type': 'application/json',
-            //   },
-            //   body: JSON.stringify({ username, password }),
-            // });
-
-            // const data = await response.json();
-
-            // if (data.success) {
             if (username === 'test' && password === '1234') { // Temporary login success condition
                 alert('로그인 성공!');
                 router.push('/board'); // Redirects to the main page on successful login
